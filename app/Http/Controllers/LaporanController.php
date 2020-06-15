@@ -26,14 +26,13 @@ class LaporanController extends Controller
         // $to = $request->input('tanggal_akhir' );
         //dd($from_date);
        
-		$data = DB::table('transaksi')->where('jenis_tabungan',$tabsis)->whereBetween('created_at' , [$from_date, $to_date])->get();
+		$data = DB::table('transaksi')->where('jenis_tabungan','reguler')->whereBetween('created_at' , [$from_date, $to_date])->get();
         dd($data);
         if ($request->ajax()) {
             //$data = DB::table('transaksi')->whereBetween(DB::raw('DATE(created_at)'), array($from_date, $to_date))->get();
 			//$data = DB::table('transaksi')->where('jenis_tabungan',$request->jenistab)->get();
             return Datatables::of($data)
                 ->addColumn('nama', function($data) {
-                    //fungsi persotoyan
                     $temp = DB::table('siswa')->where('nis', $data->nis)->first();
                     $nama_siswa = $temp->nama_lengkap;
                     return $nama_siswa;
