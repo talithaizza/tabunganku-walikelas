@@ -50,7 +50,6 @@ class SiswaController extends Controller
 					})
 			->make(true);
         }
-
         $html = $htmlBuilder
             ->addColumn(['data' => 'nis', 'name' => 'nis', 'title' => 'NIS']) //menambahkan kolom NIS, data dan name diisikan field pada tabel
             ->addColumn(['data' => 'nama_lengkap', 'name' => 'nama_lengkap', 'title' => 'Nama Lengkap']) //menambahkan kolom Nama Lengkap

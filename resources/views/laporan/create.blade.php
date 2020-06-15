@@ -20,7 +20,7 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                {!! Form::open(['url' => route('laporan.index'), 'method' => 'post']) !!}
+                {!! Form::open(['url' => route('laporan.store'), 'method' => 'post']) !!}
                     @include('laporan._form')
                 {!! Form::close() !!}
             </div>

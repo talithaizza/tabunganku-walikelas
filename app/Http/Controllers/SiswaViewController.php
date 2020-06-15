@@ -25,7 +25,7 @@ class SiswaViewController extends Controller
     //
     public function index(Request $request, Builder $htmlBuilder)
     {
-		//cari kelas dari guru yang login
+        //cari kelas dari guru yang login
 		$nama_guru = Auth::user()->name;
 		$kelas_guru = DB::table('kelas')->where('wali_kelas',$nama_guru)->first();
 		
