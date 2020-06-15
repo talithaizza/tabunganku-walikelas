@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\database",
+    "\\database\\migrations",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\dashboard",
+    "\\routes"
+  ],
+  "SelectedNode": "\\app\\siswa.php",
+  "PreviewInSolutionExplorer": false
+}
